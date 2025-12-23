@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><style>
+  /* your styles */
+</style>
+canvas {
+  position: absolute;
+  left: 220px;
+  top: 0;
+}
+
   <meta charset="UTF-8" />
   <title>3D House Builder – Drag Wall Example</title>
   <style>
@@ -118,7 +126,8 @@
   window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth - 220, window.innerHeight);
+
   });
 
   // ANIMATE
